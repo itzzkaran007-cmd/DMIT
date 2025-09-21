@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DMIT | Report</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <nav>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="report.html">Report</a> |
+      <a href="upload.html">Upload</a>
+    </nav>
+  </nav>
+
+  <div class="container">
+    <h1>Generated Report</h1>
+    <section id="reportSection" style="display:none;">
+      <div id="reportContent">
+        <p><strong>File:</strong> <span id="fileName"></span></p>
+        <p><strong>Generated:</strong> <span id="genDate"></span></p>
+        <p><strong>Top strengths:</strong> <span id="strengths"></span></p>
+        <p><strong>Areas to develop:</strong> <span id="weaknesses"></span></p>
+        <canvas id="radarChart" width="400" height="400"></canvas>
+      </div>
+      <button class="btn-success" onclick="exportPDF()">Export as PDF</button>
+      <p style="font-size:12px; color:#b45309; margin-top:10px;">
+        <strong>Disclaimer:</strong> Demo only. Not for clinical use.
+      </p>
+    </section>
+  </div>
+
+  <footer>Built for Hackathon • DMIT Prototype</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
